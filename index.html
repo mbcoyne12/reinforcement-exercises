@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Urgency from Gaps</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="game-header">
+            <h1>✅ Practice Break</h1>
+            <p class="subtitle">Don't just spot it, sell it</p>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="progress-section" id="progressSection">
+            <div class="progress-info">
+                <span id="progressText">Question 1 of 12</span>
+                <span id="scoreText">Score: 0/0</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <!-- Start Screen -->
+        <div class="screen" id="startScreen">
+            <div class="card">
+                <h2>Turn the Gap into Urgency</h2>
+                <div class="info-box">
+                    <h3>How It Works</h3>
+                    <ul>
+                        <li>You'll see 4 customer scenarios, each with a different security gap</li>
+                        <li>Choose the best response that creates urgency</li>
+                        <li>Get immediate feedback on your answers</li>
+                        <li>Learn what makes a strong impact statement</li>
+                    </ul>
+                </div>
+                <div class="info-box">
+                    <h3>What You'll Practice</h3>
+                    <ul>
+                        <li><strong>Accountability:</strong> Traceability and auditability gaps</li>
+                        <li><strong>Over-Privilege:</strong> Excessive access and permissions</li>
+                        <li><strong>Delegation:</strong> Identity inheritance and attribution</li>
+                        <li><strong>Last Mile:</strong> Real-time enforcement gaps</li>
+                    </ul>
+                </div>
+                <button class="btn btn-primary" id="startButton">Start Training</button>
+            </div>
+        </div>
+
+        <!-- Question Screen -->
+        <div class="screen hidden" id="questionScreen">
+            <div class="card">
+                <div class="gap-badge" id="gapBadge">Accountability</div>
+                
+                <div class="scenario-box">
+                    <h3>Customer Scenario</h3>
+                    <p class="scenario-text" id="scenarioText"></p>
+                </div>
+
+                <div class="question-box">
+                    <h3 id="questionText">Why does this matter to the customer?</h3>
+                    <div class="options" id="optionsContainer">
+                        <!-- Options will be inserted here by JavaScript -->
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" id="submitButton" disabled>Submit Answer</button>
+            </div>
+        </div>
+
+        <!-- Feedback Screen -->
+        <div class="screen hidden" id="feedbackScreen">
+            <div class="card">
+                <div class="feedback-header" id="feedbackHeader">
+                    <span class="feedback-icon" id="feedbackIcon">✓</span>
+                    <h2 id="feedbackTitle">Correct!</h2>
+                </div>
+
+                <div class="feedback-box">
+                    <h3>Explanation</h3>
+                    <p id="feedbackText"></p>
+                </div>
+
+                <div class="learning-points" id="learningPointsSection">
+                    <h3>Key Elements of Strong Impact Statements</h3>
+                    <ul id="learningPointsList">
+                        <!-- Learning points will be inserted here -->
+                    </ul>
+                </div>
+
+                <button class="btn btn-primary" id="nextButton">Next Scenario</button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div class="screen hidden" id="resultsScreen">
+            <div class="card">
+                <h2>Training Complete!</h2>
+                
+                <div class="results-summary">
+                    <div class="score-display">
+                        <div class="score-number" id="finalScore">0</div>
+                        <div class="score-label">out of <span id="totalScore">36</span> points</div>
+                    </div>
+                    <div class="performance-level" id="performanceLevel">
+                        <span class="level-badge" id="levelBadge">Proficient</span>
+                        <p id="levelDescription"></p>
+                    </div>
+                </div>
+
+                <div class="results-breakdown">
+                    <h3>Your Performance by Gap</h3>
+                    <div id="gapBreakdown">
+                        <!-- Gap breakdown will be inserted here -->
+                    </div>
+                </div>
+
+                <div class="next-steps">
+                    <h3>Next Steps</h3>
+                    <ul id="nextStepsList">
+                        <!-- Next steps will be inserted here based on performance -->
+                    </ul>
+                </div>
+
+                <div class="button-group">
+                    <button class="btn btn-secondary" id="reviewButton">Review Answers</button>
+                    <button class="btn btn-primary" id="restartButton">Start Over</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="game-footer">
+            <p>Agentic Runtime Security Training | Master the Message Workshop</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scenarios.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
